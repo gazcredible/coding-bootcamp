@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Welcome to page 1</h1>
+<p>My first paragraph.</p>
+
+{% load static %}
+<img src="{% static 'website/img_girl.jpeg' %}" alt="Girl in a jacket" width="500" height="600">
+
+<p></p>
+<button><a href="{% url 'website-page-2' %}">go to page 2</a></button>
+
+</body>
+</html>
