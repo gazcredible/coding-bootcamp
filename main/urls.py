@@ -15,14 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.http import HttpResponse
-from django.urls import path
+from django.urls import path, include
 
-from django.shortcuts import render
-
-def my_webpage(request):
-    return render(request, 'page1.html',{'name': 'gareth'})
 
 urlpatterns = [    
     path('admin/', admin.site.urls),
-    path('', my_webpage)
+    path('', include('website.urls'))
 ]
